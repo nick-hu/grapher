@@ -1,0 +1,283 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module functions</title>
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>functions</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:///C:/users/nicholas/desktop/py-workspace/graphnew/functions.py">c:\users\nicholas\desktop\py-workspace\graphnew\functions.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="ast.html">ast</a><br>
+</td><td width="25%" valign=top><a href="math.html">math</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="__builtin__.html#object">__builtin__.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="functions.html#Function">Function</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="functions.html#FunctionImage">FunctionImage</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="functions.html#Points">Points</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="functions.html#PointsImage">PointsImage</a>
+</font></dt></dl>
+</dd>
+</dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Function">class <strong>Function</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Function">Function</a>&nbsp;base&nbsp;class&nbsp;for&nbsp;evaluating&nbsp;and&nbsp;manipulating&nbsp;functions.<br>
+&nbsp;<br>
+The&nbsp;function&nbsp;can&nbsp;be&nbsp;evaluated&nbsp;by&nbsp;"calling"&nbsp;func_inst(x_value).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Function-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Function-__and__"><strong>__and__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Function-__call__"><strong>__call__</strong></a>(self, x, gvars<font color="#909090">={}</font>)</dt></dl>
+
+<dl><dt><a name="Function-__div__"><strong>__div__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Function-__init__"><strong>__init__</strong></a>(self, fstr, restrict<font color="#909090">=None</font>)</dt><dd><tt>Constructs&nbsp;a&nbsp;function&nbsp;from&nbsp;an&nbsp;expression&nbsp;string&nbsp;which&nbsp;is<br>
+parsed&nbsp;for&nbsp;validity&nbsp;to&nbsp;ensure&nbsp;safe&nbsp;evaluation&nbsp;using&nbsp;<a href="#Function-value">value</a>(...)&nbsp;.<br>
+&nbsp;<br>
+A&nbsp;restriction&nbsp;can&nbsp;be&nbsp;specified&nbsp;with&nbsp;a&nbsp;list&nbsp;in&nbsp;interval&nbsp;notation:<br>
+[n]&nbsp;denotes&nbsp;a&nbsp;closed&nbsp;endpoint,&nbsp;whereas&nbsp;n&nbsp;denotes&nbsp;an&nbsp;open&nbsp;endpoint.<br>
+For&nbsp;example,&nbsp;[a,&nbsp;[b]]&nbsp;represents&nbsp;{x&nbsp;|&nbsp;a&nbsp;&lt;&nbsp;x&nbsp;&lt;=&nbsp;b}.</tt></dd></dl>
+
+<dl><dt><a name="Function-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Function-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Function-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Function-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="Function-checktype"><strong>checktype</strong></a>(f1, f2, op)</dt><dd><tt>Check&nbsp;if&nbsp;two&nbsp;objects&nbsp;are&nbsp;the&nbsp;same&nbsp;type&nbsp;(for&nbsp;combining<br>
+functions).</tt></dd></dl>
+
+<dl><dt><a name="Function-combine_func"><strong>combine_func</strong></a>(f1, f2, op)</dt><dd><tt>Returns&nbsp;a&nbsp;new&nbsp;<a href="#Function">Function</a>&nbsp;combining&nbsp;two&nbsp;functions.<br>
+&nbsp;<br>
+The&nbsp;new&nbsp;function's&nbsp;string&nbsp;is&nbsp;the&nbsp;concatenation&nbsp;of&nbsp;f1&nbsp;and&nbsp;f2's<br>
+strings&nbsp;with&nbsp;op.&nbsp;The&nbsp;two&nbsp;functions&nbsp;must&nbsp;both&nbsp;be&nbsp;<a href="#Function">Function</a>&nbsp;or<br>
+<a href="#FunctionImage">FunctionImage</a>&nbsp;instances.<br>
+If&nbsp;the&nbsp;parents&nbsp;are&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;instances,&nbsp;a&nbsp;string&nbsp;will&nbsp;be<br>
+returned&nbsp;for&nbsp;use&nbsp;with&nbsp;the&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;constructor.</tt></dd></dl>
+
+<dl><dt><a name="Function-compose_func"><strong>compose_func</strong></a>(f1, f2)</dt><dd><tt>Returns&nbsp;a&nbsp;new&nbsp;<a href="#Function">Function</a>&nbsp;equivalent&nbsp;to&nbsp;f1@f2(x).<br>
+&nbsp;<br>
+The&nbsp;new&nbsp;function's&nbsp;string&nbsp;is&nbsp;f1's&nbsp;string&nbsp;with&nbsp;f2&nbsp;substituted<br>
+for&nbsp;x&nbsp;by&nbsp;string&nbsp;replacement.&nbsp;The&nbsp;two&nbsp;functions&nbsp;must&nbsp;both&nbsp;be<br>
+<a href="#Function">Function</a>&nbsp;or&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;instances.<br>
+If&nbsp;the&nbsp;parents&nbsp;are&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;instances,&nbsp;a&nbsp;string&nbsp;will&nbsp;be<br>
+returned&nbsp;for&nbsp;use&nbsp;with&nbsp;the&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;constructor.</tt></dd></dl>
+
+<dl><dt><a name="Function-value"><strong>value</strong></a>(self, x, gvars<font color="#909090">={}</font>)</dt><dd><tt>Evaluate&nbsp;a&nbsp;function&nbsp;at&nbsp;x&nbsp;using&nbsp;the&nbsp;gvars&nbsp;variable&nbsp;dictionary.<br>
+&nbsp;<br>
+The&nbsp;function&nbsp;has&nbsp;access&nbsp;to&nbsp;all&nbsp;functions&nbsp;in&nbsp;the&nbsp;math&nbsp;module,<br>
+the&nbsp;abs&nbsp;function,&nbsp;and&nbsp;the&nbsp;constants&nbsp;pi&nbsp;and&nbsp;e.<br>
+Evaluation&nbsp;occurs&nbsp;within&nbsp;this&nbsp;namespace&nbsp;and&nbsp;without&nbsp;built-ins.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="FunctionImage">class <strong>FunctionImage</strong></a>(<a href="functions.html#Function">Function</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Function">Function</a>&nbsp;image&nbsp;class&nbsp;which&nbsp;can&nbsp;be&nbsp;used&nbsp;with&nbsp;GraphImage&nbsp;class.<br>
+&nbsp;<br>
+The&nbsp;function&nbsp;can&nbsp;be&nbsp;evaluated&nbsp;by&nbsp;"calling"&nbsp;func_inst(x_value).<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="functions.html#FunctionImage">FunctionImage</a></dd>
+<dd><a href="functions.html#Function">Function</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="FunctionImage-__init__"><strong>__init__</strong></a>(self, fstr, pcolor<font color="#909090">=(0, 0, 0)</font>, pthick<font color="#909090">=2</font>, show<font color="#909090">=True</font>, eq<font color="#909090">='='</font>, restrict<font color="#909090">=None</font>)</dt><dd><tt>Construct&nbsp;a&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;instance&nbsp;for&nbsp;use&nbsp;with&nbsp;the<br>
+GraphImage&nbsp;class.<br>
+&nbsp;<br>
+pcolor&nbsp;is&nbsp;an&nbsp;RGB&nbsp;color&nbsp;tuple,&nbsp;pthick&nbsp;is&nbsp;the&nbsp;point&nbsp;thickness,<br>
+eq&nbsp;is&nbsp;the&nbsp;optional&nbsp;inequality&nbsp;as&nbsp;a&nbsp;string,&nbsp;and&nbsp;show<br>
+controls&nbsp;whether&nbsp;or&nbsp;not&nbsp;the&nbsp;function&nbsp;is&nbsp;displayed.<br>
+&nbsp;<br>
+A&nbsp;restriction&nbsp;can&nbsp;be&nbsp;specified&nbsp;with&nbsp;a&nbsp;list&nbsp;in&nbsp;interval&nbsp;notation:<br>
+[n]&nbsp;denotes&nbsp;a&nbsp;closed&nbsp;endpoint,&nbsp;whereas&nbsp;n&nbsp;denotes&nbsp;an&nbsp;open&nbsp;endpoint.<br>
+For&nbsp;example,&nbsp;[a,&nbsp;[b]]&nbsp;represents&nbsp;{x&nbsp;|&nbsp;a&nbsp;&lt;&nbsp;x&nbsp;&lt;=&nbsp;b}.</tt></dd></dl>
+
+<dl><dt><a name="FunctionImage-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="functions.html#Function">Function</a>:<br>
+<dl><dt><a name="FunctionImage-__add__"><strong>__add__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="FunctionImage-__and__"><strong>__and__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="FunctionImage-__call__"><strong>__call__</strong></a>(self, x, gvars<font color="#909090">={}</font>)</dt></dl>
+
+<dl><dt><a name="FunctionImage-__div__"><strong>__div__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="FunctionImage-__mul__"><strong>__mul__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="FunctionImage-__str__"><strong>__str__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="FunctionImage-__sub__"><strong>__sub__</strong></a>(self, other)</dt></dl>
+
+<dl><dt><a name="FunctionImage-checktype"><strong>checktype</strong></a>(f1, f2, op)</dt><dd><tt>Check&nbsp;if&nbsp;two&nbsp;objects&nbsp;are&nbsp;the&nbsp;same&nbsp;type&nbsp;(for&nbsp;combining<br>
+functions).</tt></dd></dl>
+
+<dl><dt><a name="FunctionImage-combine_func"><strong>combine_func</strong></a>(f1, f2, op)</dt><dd><tt>Returns&nbsp;a&nbsp;new&nbsp;<a href="#Function">Function</a>&nbsp;combining&nbsp;two&nbsp;functions.<br>
+&nbsp;<br>
+The&nbsp;new&nbsp;function's&nbsp;string&nbsp;is&nbsp;the&nbsp;concatenation&nbsp;of&nbsp;f1&nbsp;and&nbsp;f2's<br>
+strings&nbsp;with&nbsp;op.&nbsp;The&nbsp;two&nbsp;functions&nbsp;must&nbsp;both&nbsp;be&nbsp;<a href="#Function">Function</a>&nbsp;or<br>
+<a href="#FunctionImage">FunctionImage</a>&nbsp;instances.<br>
+If&nbsp;the&nbsp;parents&nbsp;are&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;instances,&nbsp;a&nbsp;string&nbsp;will&nbsp;be<br>
+returned&nbsp;for&nbsp;use&nbsp;with&nbsp;the&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;constructor.</tt></dd></dl>
+
+<dl><dt><a name="FunctionImage-compose_func"><strong>compose_func</strong></a>(f1, f2)</dt><dd><tt>Returns&nbsp;a&nbsp;new&nbsp;<a href="#Function">Function</a>&nbsp;equivalent&nbsp;to&nbsp;f1@f2(x).<br>
+&nbsp;<br>
+The&nbsp;new&nbsp;function's&nbsp;string&nbsp;is&nbsp;f1's&nbsp;string&nbsp;with&nbsp;f2&nbsp;substituted<br>
+for&nbsp;x&nbsp;by&nbsp;string&nbsp;replacement.&nbsp;The&nbsp;two&nbsp;functions&nbsp;must&nbsp;both&nbsp;be<br>
+<a href="#Function">Function</a>&nbsp;or&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;instances.<br>
+If&nbsp;the&nbsp;parents&nbsp;are&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;instances,&nbsp;a&nbsp;string&nbsp;will&nbsp;be<br>
+returned&nbsp;for&nbsp;use&nbsp;with&nbsp;the&nbsp;<a href="#FunctionImage">FunctionImage</a>&nbsp;constructor.</tt></dd></dl>
+
+<dl><dt><a name="FunctionImage-value"><strong>value</strong></a>(self, x, gvars<font color="#909090">={}</font>)</dt><dd><tt>Evaluate&nbsp;a&nbsp;function&nbsp;at&nbsp;x&nbsp;using&nbsp;the&nbsp;gvars&nbsp;variable&nbsp;dictionary.<br>
+&nbsp;<br>
+The&nbsp;function&nbsp;has&nbsp;access&nbsp;to&nbsp;all&nbsp;functions&nbsp;in&nbsp;the&nbsp;math&nbsp;module,<br>
+the&nbsp;abs&nbsp;function,&nbsp;and&nbsp;the&nbsp;constants&nbsp;pi&nbsp;and&nbsp;e.<br>
+Evaluation&nbsp;occurs&nbsp;within&nbsp;this&nbsp;namespace&nbsp;and&nbsp;without&nbsp;built-ins.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="functions.html#Function">Function</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Points">class <strong>Points</strong></a>(<a href="__builtin__.html#object">__builtin__.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Class&nbsp;for&nbsp;a&nbsp;container-like&nbsp;group&nbsp;of&nbsp;points.<br>
+&nbsp;<br>
+The&nbsp;points&nbsp;can&nbsp;be&nbsp;evaluated&nbsp;by&nbsp;"calling"&nbsp;points_inst(x_value).<br>
+<a href="#Points">Points</a>&nbsp;support&nbsp;dictionary-style&nbsp;assignment.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Points-__call__"><strong>__call__</strong></a>(self, x, *_)</dt></dl>
+
+<dl><dt><a name="Points-__delitem__"><strong>__delitem__</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Points-__getitem__"><strong>__getitem__</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="Points-__init__"><strong>__init__</strong></a>(self, plist)</dt><dd><tt>Builds&nbsp;an&nbsp;internal&nbsp;point&nbsp;dictionary&nbsp;from&nbsp;a&nbsp;list&nbsp;of&nbsp;2-tuples.</tt></dd></dl>
+
+<dl><dt><a name="Points-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Points-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Points-__setitem__"><strong>__setitem__</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="Points-value"><strong>value</strong></a>(self, x)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;y-values&nbsp;for&nbsp;a&nbsp;specified&nbsp;x-value.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="PointsImage">class <strong>PointsImage</strong></a>(<a href="functions.html#Points">Points</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Points">Points</a>&nbsp;image&nbsp;class&nbsp;which&nbsp;can&nbsp;be&nbsp;used&nbsp;with&nbsp;GraphImage&nbsp;class.<br>
+&nbsp;<br>
+The&nbsp;points&nbsp;can&nbsp;be&nbsp;evaluated&nbsp;by&nbsp;"calling"&nbsp;points_inst(x_value).<br>
+<a href="#Points">Points</a>&nbsp;support&nbsp;dictionary-style&nbsp;assignment.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="functions.html#PointsImage">PointsImage</a></dd>
+<dd><a href="functions.html#Points">Points</a></dd>
+<dd><a href="__builtin__.html#object">__builtin__.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="PointsImage-__init__"><strong>__init__</strong></a>(self, plist, pcolor<font color="#909090">=(0, 0, 0)</font>, pthick<font color="#909090">=2</font>, show<font color="#909090">=True</font>)</dt><dd><tt>Construct&nbsp;a&nbsp;<a href="#PointsImage">PointsImage</a>&nbsp;instance&nbsp;for&nbsp;use&nbsp;with&nbsp;the<br>
+GraphImage&nbsp;class.<br>
+&nbsp;<br>
+pcolor&nbsp;is&nbsp;an&nbsp;RGB&nbsp;color&nbsp;tuple,&nbsp;pthick&nbsp;is&nbsp;the&nbsp;point&nbsp;thickness,<br>
+and&nbsp;show&nbsp;controls&nbsp;whether&nbsp;or&nbsp;not&nbsp;the&nbsp;points&nbsp;are&nbsp;displayed.</tt></dd></dl>
+
+<dl><dt><a name="PointsImage-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<hr>
+Methods inherited from <a href="functions.html#Points">Points</a>:<br>
+<dl><dt><a name="PointsImage-__call__"><strong>__call__</strong></a>(self, x, *_)</dt></dl>
+
+<dl><dt><a name="PointsImage-__delitem__"><strong>__delitem__</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="PointsImage-__getitem__"><strong>__getitem__</strong></a>(self, x)</dt></dl>
+
+<dl><dt><a name="PointsImage-__len__"><strong>__len__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="PointsImage-__setitem__"><strong>__setitem__</strong></a>(self, x, y)</dt></dl>
+
+<dl><dt><a name="PointsImage-value"><strong>value</strong></a>(self, x)</dt><dd><tt>Return&nbsp;a&nbsp;list&nbsp;of&nbsp;y-values&nbsp;for&nbsp;a&nbsp;specified&nbsp;x-value.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="functions.html#Points">Points</a>:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>
