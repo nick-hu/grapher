@@ -7,6 +7,8 @@ Index:
 ------
 
 docs: pydoc-generated HTML documentation
+* [functions](http://htmlpreview.github.io/?https://github.com/nick-hu/grapher/blob/master/docs/functions.html)
+* [graphimg](http://htmlpreview.github.io/?https://github.com/nick-hu/grapher/blob/master/docs/graphimg.html)
 
 examples: some short examples with explanatory comments
 
